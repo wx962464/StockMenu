@@ -73,7 +73,6 @@ class StockMenuController: NSObject {
         
         stockApi.getStockDataApi(stockList: stockList).subscribeOn(MainScheduler.instance).subscribe(
             onNext: { [weak self] stockModelArray in
-                print("get stockData success  array = \(stockModelArray)")
                 self?.stockDataView.stockDataList = stockModelArray
                 if self?.stockRollItem.isVisible ?? false {
                     self?.stockRollView.updateStockDataArray(stockDataArray: stockModelArray)
@@ -81,7 +80,7 @@ class StockMenuController: NSObject {
             },
             onError: { (error) in
                 print("get stockData fail error = \(error) ")
-        }).disposed(by: disposeBag)
+            }).disposed(by: disposeBag)
     }
     
     func startStockDataUpdate() {

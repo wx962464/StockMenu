@@ -29,6 +29,7 @@
                 <menuItem title="stockData" id="wRe-2F-k1U">
                     <modifierMask key="keyEquivalentModifierMask"/>
                 </menuItem>
+                <menuItem isSeparatorItem="YES" id="Ddb-Z6-DaP"/>
                 <menuItem title="停止更新" id="LaF-XC-Ssu">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
@@ -47,6 +48,7 @@
                         <action selector="addStock:" target="HQj-6f-h6z" id="E5w-ox-kWc"/>
                     </connections>
                 </menuItem>
+                <menuItem isSeparatorItem="YES" id="8kU-2O-b0r"/>
                 <menuItem title="退出" id="acn-QG-MK6">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>

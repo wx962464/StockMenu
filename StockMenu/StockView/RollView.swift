@@ -22,7 +22,6 @@ class RollView: NSView {
     }
     
     func updateStockDataArray(stockDataArray: Array<StockDataModel>) {
-        print("updateStockDataArray count = \(stockDataArray.count)")
         mStockDataArray = stockDataArray
     }
     
@@ -37,7 +36,6 @@ class RollView: NSView {
     }
     
     private func updateRollView() {
-        print("updateRollView index = \(index) count = \(mStockDataArray.count)")
         if mStockDataArray.count <= 0 {
             print(" stock data array is empty")
             return

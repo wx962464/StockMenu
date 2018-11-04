@@ -14,7 +14,6 @@ class StockView: NSView {
     
     var stockDataList = Array<StockDataModel>() {
         didSet {
-            print("stockTableView relaodData")
             stockTableView.reloadData()
         }
     }
@@ -31,7 +30,7 @@ class StockView: NSView {
         stockTableView.dataSource = self
         stockTableView.target = self
         stockTableView.layer?.borderWidth = 0
-//        stockTableView.selectionHighlightStyle =  .none
+        stockTableView.selectionHighlightStyle =  .none
     }
     
 }
@@ -80,7 +79,6 @@ extension StockView: NSTableViewDelegate {
 
 extension StockView: NSTableViewDataSource {
     func numberOfRows(in tableView: NSTableView) -> Int {
-        print("numberOfRows stockDataList count = \(stockDataList.count) ")
         return stockDataList.count
     }
 }

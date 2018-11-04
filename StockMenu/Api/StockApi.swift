@@ -25,10 +25,7 @@ class StockApi {
                 requestRealAddr += ",s_\(str)"
             }
         }
-        print("request real address = \(requestRealAddr)")
         return request(requestRealAddr).map({ (stockDetailStr) -> Array<StockDataModel> in
-            
-            print("request get result str = \(stockDetailStr)")
             
             var stockModelArray = Array<StockDataModel>()
             let stockArray = (stockDetailStr as! String).split(separator: STOCK_SPLIT).filter { $0.count > 0 }
@@ -36,8 +33,6 @@ class StockApi {
                 let stockDataArray = stockStrData.split(separator: STOCK_VALUE_SPLIT).map { return String($0) }
                 if stockDataArray.count > 5 {
                     stockModelArray.append(StockDataModel(with: stockDataArray))
-                } else {
-                    print("stockDataArray count < 5 skip......")
                 }
             }
             return stockModelArray
@@ -55,7 +50,7 @@ class StockApi {
                 .responseString { response in
                     switch response.result {
                     case .success(let value):
-                        print("request success value = \(value)")
+                        print("get sotck data success: \(value)")
                         if let status = response.response?.statusCode {
                             if status >= 300 {
                                 observable.onError(StockError.HttpSeverError)
