@@ -27,13 +27,11 @@ class StockView: NSView {
     }
     
     func initView() {
-        print("init view start")
         stockTableView.delegate = self
         stockTableView.dataSource = self
-//        stockTableView.target = self
+        stockTableView.target = self
         stockTableView.layer?.borderWidth = 0
-        stockTableView.selectionHighlightStyle =  .none
-        print("init view end")
+//        stockTableView.selectionHighlightStyle =  .none
     }
     
 }

@@ -41,7 +41,7 @@
                         <action selector="hideRollView:" target="HQj-6f-h6z" id="dRN-7H-kuW"/>
                     </connections>
                 </menuItem>
-                <menuItem title="添加" id="Tgi-Ub-1iU">
+                <menuItem title="添加/删除" id="Tgi-Ub-1iU">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
                         <action selector="addStock:" target="HQj-6f-h6z" id="E5w-ox-kWc"/>
@@ -57,17 +57,17 @@
             <point key="canvasLocation" x="97" y="-348"/>
         </menu>
         <customView id="ewF-Yo-xp8" customClass="StockView" customModule="StockMenu" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="349" height="156"/>
+            <rect key="frame" x="0.0" y="0.0" width="344" height="156"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
                 <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BfK-uM-Mcx">
-                    <rect key="frame" x="0.0" y="0.0" width="349" height="156"/>
+                    <rect key="frame" x="0.0" y="0.0" width="344" height="156"/>
                     <clipView key="contentView" copiesOnScroll="NO" id="qjL-GL-9ic">
-                        <rect key="frame" x="0.0" y="0.0" width="349" height="156"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <rect key="frame" x="0.0" y="0.0" width="344" height="156"/>
+                        <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" headerView="FoV-jW-2ph" viewBased="YES" id="8zG-nn-H96">
-                                <rect key="frame" x="0.0" y="0.0" width="349" height="131"/>
+                                <rect key="frame" x="0.0" y="0.0" width="344" height="131"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <size key="intercellSpacing" width="3" height="2"/>
                                 <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -205,7 +205,7 @@
                                             </tableCellView>
                                         </prototypeCellViews>
                                     </tableColumn>
-                                    <tableColumn identifier="increaseRatio" width="64" minWidth="40" maxWidth="1000" id="nEF-1Z-oqh">
+                                    <tableColumn identifier="increaseRatio" width="63" minWidth="40" maxWidth="1000" id="nEF-1Z-oqh">
                                         <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="center" title="涨幅比率">
                                             <font key="font" metaFont="smallSystem"/>
                                             <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -219,11 +219,11 @@
                                         <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                         <prototypeCellViews>
                                             <tableCellView id="Wxk-hs-Bv6">
-                                                <rect key="frame" x="279" y="1" width="64" height="17"/>
+                                                <rect key="frame" x="279" y="1" width="63" height="17"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
                                                     <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d8F-fm-c8M">
-                                                        <rect key="frame" x="0.0" y="0.0" width="64" height="17"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="63" height="17"/>
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                                         <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" alignment="center" id="0ZL-00-ZgI">
                                                             <font key="font" metaFont="system"/>
@@ -243,7 +243,7 @@
                         </subviews>
                     </clipView>
                     <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="7hT-O3-4ht">
-                        <rect key="frame" x="1" y="139" width="328" height="16"/>
+                        <rect key="frame" x="0.0" y="140" width="344" height="16"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </scroller>
                     <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="qv3-Tl-9hH">
@@ -251,7 +251,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </scroller>
                     <tableHeaderView key="headerView" id="FoV-jW-2ph">
-                        <rect key="frame" x="0.0" y="0.0" width="349" height="25"/>
+                        <rect key="frame" x="0.0" y="0.0" width="344" height="25"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </tableHeaderView>
                 </scrollView>
@@ -265,7 +265,7 @@
             <connections>
                 <outlet property="stockTableView" destination="8zG-nn-H96" id="kcF-c7-Dgc"/>
             </connections>
-            <point key="canvasLocation" x="223.5" y="-183"/>
+            <point key="canvasLocation" x="221" y="-183"/>
         </customView>
         <customView misplaced="YES" id="qaX-jy-cm4" customClass="RollView" customModule="StockMenu" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="200" height="23"/>
@@ -273,7 +273,7 @@
             <subviews>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mUj-HS-JGH">
                     <rect key="frame" x="0.0" y="0.0" width="200" height="23"/>
-                    <textFieldCell key="cell" lineBreakMode="clipping" borderStyle="bezel" alignment="center" bezelStyle="round" id="58z-Nf-vGQ">
+                    <textFieldCell key="cell" lineBreakMode="clipping" borderStyle="bezel" alignment="left" bezelStyle="round" id="58z-Nf-vGQ">
                         <font key="font" usesAppearanceFont="YES"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>

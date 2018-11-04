@@ -31,6 +31,10 @@ class StockDataModel: NSObject {
         code = stockData[2]
         value = stockData[3]
         increase = stockData[4]
-        increaseRatio = stockData[5]
+        increaseRatio = stockData[5] + "%"
+    }
+    
+    override var description: String {
+        return  "\(name) \(code) \(value) \(increase) \(increaseRatio)"
     }
 }

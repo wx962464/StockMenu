@@ -16,23 +16,13 @@ let STOCK_VALUE_SPLIT: Character = "~"
 
 class StockApi {
     
-    private func getRealCode(str: String) -> String {
-        if str.starts(with: "00") {
-            return "s_sz\(str)"
-        } else if str.starts(with: "60") {
-            return "s_sh\(str)"
-        } else {
-            return str
-        }
-    }
-    
     func getStockDataApi(stockList: Array<String>) -> Observable<Array<StockDataModel>> {
         var requestRealAddr = STOCK_ADDRESS
         for (index,str) in stockList.enumerated() {
             if index == 0 {
-                requestRealAddr += getRealCode(str: str)
+                requestRealAddr += "s_\(str)"
             } else {
-                requestRealAddr += ",\(getRealCode(str: str))"
+                requestRealAddr += ",s_\(str)"
             }
         }
         print("request real address = \(requestRealAddr)")
@@ -42,9 +32,7 @@ class StockApi {
             
             var stockModelArray = Array<StockDataModel>()
             let stockArray = (stockDetailStr as! String).split(separator: STOCK_SPLIT).filter { $0.count > 0 }
-            print("stock  Array size = \(stockArray.count)")
             for stockStrData in stockArray {
-                print("stock str data = \(stockStrData)" )
                 let stockDataArray = stockStrData.split(separator: STOCK_VALUE_SPLIT).map { return String($0) }
                 if stockDataArray.count > 5 {
                     stockModelArray.append(StockDataModel(with: stockDataArray))

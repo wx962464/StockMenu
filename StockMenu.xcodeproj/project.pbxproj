@@ -17,6 +17,8 @@
 		93E0A558218C840600527A48 /* StockApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E0A557218C840600527A48 /* StockApi.swift */; };
 		93E0A55A218C9ECF00527A48 /* StockError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E0A559218C9ECF00527A48 /* StockError.swift */; };
 		93E0A55C218CA6CC00527A48 /* RollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E0A55B218CA6CC00527A48 /* RollView.swift */; };
+		93E0A55F218D7A4D00527A48 /* StockManagerWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E0A55D218D7A4D00527A48 /* StockManagerWindowController.swift */; };
+		93E0A560218D7A4D00527A48 /* StockManagerWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93E0A55E218D7A4D00527A48 /* StockManagerWindowController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +37,8 @@
 		93E0A557218C840600527A48 /* StockApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockApi.swift; sourceTree = "<group>"; };
 		93E0A559218C9ECF00527A48 /* StockError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockError.swift; sourceTree = "<group>"; };
 		93E0A55B218CA6CC00527A48 /* RollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RollView.swift; sourceTree = "<group>"; };
+		93E0A55D218D7A4D00527A48 /* StockManagerWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockManagerWindowController.swift; sourceTree = "<group>"; };
+		93E0A55E218D7A4D00527A48 /* StockManagerWindowController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StockManagerWindowController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +88,8 @@
 				93E0A5492189FD2A00527A48 /* StockView */,
 				93E0A50B2188A65B00527A48 /* Assets.xcassets */,
 				93E0A5092188A46600527A48 /* StockMenuController.swift */,
+				93E0A55D218D7A4D00527A48 /* StockManagerWindowController.swift */,
+				93E0A55E218D7A4D00527A48 /* StockManagerWindowController.xib */,
 				93E0A4FB2188A34000527A48 /* AppDelegate.swift */,
 				93E0A4FF2188A34100527A48 /* MainMenu.xib */,
 				93E0A5022188A34100527A48 /* Info.plist */,
@@ -192,6 +198,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				93E0A50C2188A65B00527A48 /* Assets.xcassets in Resources */,
+				93E0A560218D7A4D00527A48 /* StockManagerWindowController.xib in Resources */,
 				93E0A5012188A34100527A48 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -254,6 +261,7 @@
 			files = (
 				93E0A558218C840600527A48 /* StockApi.swift in Sources */,
 				93E0A55C218CA6CC00527A48 /* RollView.swift in Sources */,
+				93E0A55F218D7A4D00527A48 /* StockManagerWindowController.swift in Sources */,
 				93E0A54D2189FE0A00527A48 /* StockView.swift in Sources */,
 				93E0A4FC2188A34000527A48 /* AppDelegate.swift in Sources */,
 				93E0A55A218C9ECF00527A48 /* StockError.swift in Sources */,
